@@ -1386,6 +1386,14 @@ certmanager:
   installCRDs: true
 
 
+# DNSConfig for all daemonsets/deployments
+
+dnsConfig:
+  options:
+    - name: ndots
+      value: "1"
+    - name: edns0
+
 ################################################################################
 # Helm Chart Feature Gates.
 # The following feature gates are used to enable/disable features in the Helm chart

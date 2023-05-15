@@ -49,6 +49,9 @@ spec:
         sidecar.istio.io/inject: "false"
         {{- end }}
     spec:
+      {{- if .Values.dnsConfig }}
+        {{ toYaml .Values.dnsConfig | nindent 6 }}
+      {{- endif }}
       {{- if not .Values.isWindows }}
       hostNetwork: true
       {{- end }}
