@@ -52,7 +52,7 @@ spec:
         {{- end }}
     spec:
       {{- if .Values.dnsConfig }}
-        dnsOptions:
+        dnsConfig:
         {{ toYaml .Values.dnsConfig | nindent 8 }}
       {{- end }}
       serviceAccountName: {{ template "splunk-otel-collector.serviceAccountName" . }}
