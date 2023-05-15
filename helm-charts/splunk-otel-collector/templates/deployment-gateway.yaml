@@ -44,7 +44,7 @@ spec:
     spec:
       {{- if .Values.dnsConfig }}
         {{ toYaml .Values.dnsConfig | nindent 6 }}
-      {{- endif }}
+      {{- end }}
       serviceAccountName: {{ template "splunk-otel-collector.serviceAccountName" . }}
       nodeSelector:
         {{- if $gateway.nodeSelector }}

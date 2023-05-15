@@ -51,7 +51,7 @@ spec:
     spec:
       {{- if .Values.dnsConfig }}
         {{ toYaml .Values.dnsConfig | nindent 6 }}
-      {{- endif }}
+      {{- end }}
       {{- if not .Values.isWindows }}
       hostNetwork: true
       {{- end }}
